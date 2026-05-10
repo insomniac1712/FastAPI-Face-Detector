@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>The face detection</title>
+
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Flowbite -->
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.css" rel="stylesheet" />
+
+</head>
+
+<body class="bg-gray-950 text-white min-h-screen">
+
+    <div class="container mx-auto px-6 py-8">
+
+        <div class="text-center mb-10">
+            <h1 class="text-4xl font-bold mb-3">
+                Real-Time Face Detection
+            </h1>
+
+            <p class="text-gray-400">
+                Mega AI Backend Engineering Assignment
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+
+            <!-- Original Feed -->
+            <div class="bg-gray-900 rounded-2xl shadow-xl p-5">
+
+                <h2 class="text-2xl font-semibold mb-4">
+                    Original Feed
+                </h2>
+
+                <video
+                    id="video"
+                    autoplay
+                    playsinline
+                    class="w-full rounded-xl border border-gray-700"
+                ></video>
+
+            </div>
+
+            <!-- Processed Feed -->
+            <div class="bg-gray-900 rounded-2xl shadow-xl p-5">
+
+                <h2 class="text-2xl font-semibold mb-4">
+                    Processed Feed
+                </h2>
+
+                <img
+                    id="processed-frame"
+                    class="w-full rounded-xl border border-gray-700"
+                />
+
+            </div>
+
+        </div>
+
+        <!-- ROI DATA -->
+        <div class="mt-8 bg-gray-900 rounded-2xl shadow-xl p-5">
+
+            <h2 class="text-2xl font-semibold mb-4">
+                ROI Data
+            </h2>
+
+            <pre
+                id="roi-data"
+                class="bg-black p-4 rounded-xl overflow-auto text-green-400"
+            >
+Waiting for detection...
+            </pre>
+
+        </div>
+
+    </div>
+
+    <canvas id="canvas" class="hidden"></canvas>
+
+    <script src="script.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.js"></script>
+
+</body>
+
+</html>
