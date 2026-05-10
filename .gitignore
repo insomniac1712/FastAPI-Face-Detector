@@ -23,6 +23,9 @@ backend/.env
 *.sqlite3
 *.db
 
+backend/output.jpg
+backend/test.jpg
+
 build/
 dist/
 *.egg-info/
